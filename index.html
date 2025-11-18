@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Словоед | ЕГЭ по русскому</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Главное меню -->
+  <div id="menu" class="screen active">
+    <div class="logo">🎮 СЛОВОЕД</div>
+    <p class="subtitle">ЕГЭ по русскому — играючи!</p>
+    
+    <div class="stats">
+      <div>🧠 XP: <span id="xp">0</span></div>
+      <div>🏆 Уровень: <span id="level">1</span></div>
+    </div>
 
+    <button class="btn" onclick="startGame('task11')">Начать обучение →</button>
+    <button class="btn" onclick="showAbout()">О игре</button>
+  </div>
+
+  <!-- Экран задания -->
+  <div id="game" class="screen">
+    <div class="header">
+      <button class="btn small" onclick="backToMenu()">← Меню</button>
+      <div class="topic" id="topicTitle">...</div>
+    </div>
+
+    <div class="question-box" id="questionBox">
+      <div class="question-text" id="questionText">...</div>
+      <div class="options" id="options"></div>
+    </div>
+
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <!-- Экран "О игре" -->
+  <div id="about" class="screen">
+    <h2>📚 О Словоеде</h2>
+    <p>Пиксельная игра для подготовки к ЕГЭ по русскому языку.<br>
+    Учись правилам — получай XP — становись грамотным!</p>
+    <button class="btn" onclick="backToMenu()">Назад</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
